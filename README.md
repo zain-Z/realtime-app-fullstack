@@ -8,6 +8,7 @@
 
 ## Getting started
 
-To start project, 1st:
+To start project:
 
 - Install pipenv by command: python install pipenv
+- run "pipenv shell"
