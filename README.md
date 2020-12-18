@@ -5,6 +5,7 @@
 - Python
 - Pipenv
 - Django / Django-REST-Framework
+- Django-cors-headers
 
 ## Getting started
 
