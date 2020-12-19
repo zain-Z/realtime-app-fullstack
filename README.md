@@ -4,10 +4,11 @@
 
 - python
 - pipenv
-- django / django-REST-Framework
+- django / djangorestframework
 - django-cors-headers
 - channels
 - channels-redis
+- asgiref
 
 # Frontend
 
@@ -15,6 +16,9 @@
 - nodejs
 - npm
 - create-react-app
+- yarn
+- react-scripts
+- react-websocket
 
 ## Getting started
 
@@ -28,9 +32,9 @@ To start project without getting any errors:
 
 # for installing channels and channels-redis
 
-1- run "pip install Twisted-20.3.0-cp39-cp39-win_amd64.whl"
-2- run "pipenv install channels" then after that run "pipenv install channels channels-redis"
+- run "pip install Twisted-20.3.0-cp39-cp39-win_amd64.whl"
+- run "pipenv install channels" then after that run "pipenv install channels channels-redis"
 
 # to use redis and make docker make an image
 
-- run "docker run -p 6379:6379 -d redis:3.0"
+- run "docker run -p 6379:6379 -d redis:2.8"

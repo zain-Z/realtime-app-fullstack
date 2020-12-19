@@ -5,7 +5,7 @@ import notes.routing
 application = ProtocolTypeRouter({
     "websocket": AuthMiddlewareStack(
         URLRouter(
-            notes.routing.websocket_urlpattern
+            notes.routing.websocket_urlpatterns
         )
     )
 })

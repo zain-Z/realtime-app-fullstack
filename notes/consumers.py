@@ -2,12 +2,13 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 import json
 
-from .models import *
+from . import models
 
 
 class NoteConsumer(WebsocketConsumer):
     def connect(self):
         self.room_group_name = 'notes'
+
         async_to_sync(self.channel_layer.group_add)(
             self.room_group_name,
             self.channel_name
@@ -21,7 +22,7 @@ class NoteConsumer(WebsocketConsumer):
         )
 
     def receive(self, text_data):
-        text_data_json = json.load(text_data)
+        text_data_json = json.loads(text_data)
         title = text_data_json['title']
         content = text_data_json['content']
         id = text_data_json['id']
@@ -41,12 +42,12 @@ class NoteConsumer(WebsocketConsumer):
             }
         )
 
-        def add_note(self, event):
-            title = event['title']
-            content = event['content']
-            id = event['id']
-            self.send(text_data=json.dumps({
-                'title': title,
-                'content': content,
-                'id': id
-            }))
+    def add_note(self, event):
+        title = event['title']
+        content = event['content']
+        id = event['id']
+        self.send(text_data=json.dumps({
+            'title': title,
+            'content': content,
+            'id': id
+        }))
