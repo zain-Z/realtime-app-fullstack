@@ -6,6 +6,8 @@
 - Pipenv
 - Django / Django-REST-Framework
 - Django-cors-headers
+- Channels
+- Channels-redis
 
 ## Getting started
 
@@ -21,3 +23,7 @@ To start project without getting any errors:
 
 1- run "pip install Twisted-20.3.0-cp39-cp39-win_amd64.whl"
 2- run "pipenv install channels" then after that run "pipenv install channels channels-redis"
+
+# to use redis and make docker make an image
+
+- run "docker run -p 6379:6379 -d redis:3.0"
