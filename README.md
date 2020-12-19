@@ -2,12 +2,19 @@
 
 # Backend
 
-- Python
-- Pipenv
-- Django / Django-REST-Framework
-- Django-cors-headers
-- Channels
-- Channels-redis
+- python
+- pipenv
+- django / django-REST-Framework
+- django-cors-headers
+- channels
+- channels-redis
+
+# Frontend
+
+- javascript
+- nodejs
+- npm
+- create-react-app
 
 ## Getting started
 
